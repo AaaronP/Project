@@ -1,0 +1,139 @@
+.sidebar {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    z-index: 1000;
+}
+
+.sidebar .content {
+    position: fixed;
+    background-color: #f5f5f5;
+    height: 100vh;
+    z-index: 25;
+    padding-top: 75px;
+    transition: all .3s;
+    display: block;
+    width: 225px;
+}
+
+.content header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.content header a:last-child {
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.sidebar li section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.sidebar li aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar aside a, .sidebar li a {
+    text-decoration: none;
+    background-color: #fbfcff;
+    text-align: center;
+    border-radius: 6px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 8px;
+    margin-top: 5px;
+}
+
+.sidebar a:hover {
+    background: #e9edfa;
+    transition: background .2s;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+.arrowIcon {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    height: 18px;
+}
+
+.arrowIcon svg {
+    transition: transform .2s;
+}
+
+/* Ham Menu */
+.ham-menu {
+    height: 35px;
+    width: 35px;
+    position: fixed;
+    left: 20px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.ham-menu span {
+    height: 3px;
+    width: 100%;
+    background-color: #6F86FF;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.ham-menu span:nth-child(2) {
+    width: 75%;
+    left: 40%;
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform:
+        translate(-50%, -50%) rotate(-45deg);
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform:
+        translate(-50%, -50%) rotate(45deg);
+}
